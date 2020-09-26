@@ -1,4 +1,16 @@
+# 
+# ProjectEuler - HackerRank
+# Copyright (c) ProjectEuler - rillis. All rights reserved.
+# 
+# https://github.com/rillis/ProjectEuler
+# 
+
+import math
+import os
+import random
+import re
 import sys
+import itertools
 
 def n_termos(an, ai, r):
     return ((an-ai)//r)+1
@@ -20,8 +32,8 @@ def mult(n):
     spa15 = soma_pa(n, 15) if n+1>=15 else 0
     return spa3+spa5-spa15
 
-
-t = int(input().strip())
-for _ in range(t):
-    n = int(input().strip())
-    print(mult(n-1))
+if __name__ == "__main__":
+    t = int(input().strip())
+    for _ in range(t):
+        n = int(input().strip())
+        print(mult(n-1))

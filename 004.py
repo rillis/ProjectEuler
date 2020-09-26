@@ -1,4 +1,16 @@
+# 
+# ProjectEuler - HackerRank
+# Copyright (c) ProjectEuler - rillis. All rights reserved.
+# 
+# https://github.com/rillis/ProjectEuler
+# 
+
+import math
+import os
+import random
+import re
 import sys
+import itertools
 
 def gen_palindromes():
     pa = []
@@ -18,8 +30,9 @@ def largest_palindrome(n, pa):
             break 
     return a
 
-pa = gen_palindromes()
-t = int(input().strip())
-for a0 in range(t):
-    n = int(input().strip())
-    print(largest_palindrome(n, pa))
+if __name__ == "__main__":
+    pa = gen_palindromes()
+    t = int(input().strip())
+    for a0 in range(t):
+        n = int(input().strip())
+        print(largest_palindrome(n, pa))
