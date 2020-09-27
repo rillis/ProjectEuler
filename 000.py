@@ -20,4 +20,7 @@ def solution():
     return True
 
 if __name__ == "__main__":
-	print(solution())
+    t = int(input().strip())
+    for _ in range(t):
+        n = int(input().strip())
+	    print(solution(n))
