@@ -1,3 +1,7 @@
+
+# Points 100/100
+# Notes: -
+
 # 
 # ProjectEuler - HackerRank
 # Copyright (c) ProjectEuler - rillis. All rights reserved.

@@ -1,5 +1,6 @@
 
-# Note: running in PyPy3
+# Points 100/100
+# Notes: Got 100 points running in PyPy3 instead of Python 3
 
 # 
 # ProjectEuler - HackerRank

@@ -1,9 +1,13 @@
+
+# Points 100/100
+# Notes: -
+
 # 
 # ProjectEuler - HackerRank
 # Copyright (c) ProjectEuler - rillis. All rights reserved.
 # 
 # https://github.com/rillis/ProjectEuler
-# 
+#  
 
 import math
 import os
