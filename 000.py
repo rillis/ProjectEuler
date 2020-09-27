@@ -1,6 +1,6 @@
 
 # Points X/100
-# Notes: -
+# Notes: Running in PyPy3
 
 # 
 # ProjectEuler - HackerRank
