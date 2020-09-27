@@ -16,8 +16,8 @@ import re
 import sys
 import itertools
 
-def solution():
-    return True
+def solution(n):
+    return n
 
 if __name__ == "__main__":
     t = int(input().strip())
