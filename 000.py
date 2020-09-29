@@ -1,13 +1,13 @@
 
-# Points X/100
+# Time to achieve the answer: Xs
 # Notes: Running in PyPy3
 
-# 
-# ProjectEuler - HackerRank
+#
+# ProjectEuler
 # Copyright (c) ProjectEuler - rillis. All rights reserved.
-# 
+#
 # https://github.com/rillis/ProjectEuler
-# 
+#
 
 import math
 import os
@@ -27,8 +27,11 @@ if __name__ == "__main__":
     for _ in range(t):
         ns.append(int(input().strip()))
 
+    start_t = timeit.default_timer()  # DEBUG
     for n in ns:
         start = timeit.default_timer() #DEBUG
-        print(solution(n))
+        s = solution(n)
         stop = timeit.default_timer() #DEBUG
-        print(n, "- runtime:", stop - start) #DEBUG
+        print(n, "-", s, "- runtime:", stop - start) #DEBUG
+    stop_t = timeit.default_timer()  # DEBUG
+    print("TOTAL RUNTIME:", stop_t - start_t)  # DEBUG
