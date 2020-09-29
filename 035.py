@@ -1,5 +1,5 @@
 
-# Time to achieve the answer: Xs
+# Time to achieve the answer: 0.0451414s
 # Notes: Running in PyPy3
 
 #
