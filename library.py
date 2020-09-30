@@ -1,5 +1,6 @@
 #LISTA DE METODOS UTEIS
 import math
+import itertools
 
 #--------------------------------- Primos
 def primos(nth): #INT [bool] (true=primo) 0 até nth
@@ -156,4 +157,11 @@ def panDigital(n): #INT retorna quantida pandigital, 0: não é
         if int(x)!=i: return 0
     return i
 
+def genAllPanDigitals(a=0,b=9):
+    s = "0123456789"
+    t = []
+    for x in list(itertools.permutations(s[a:b+1],r=len(s[a:b+1]))):
+        s = int(''.join(x))
+        t.append(s)
+    return t
 
