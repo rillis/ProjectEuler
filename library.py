@@ -146,9 +146,6 @@ def genTriangles(perimeter): #INT
             if c.is_integer() and a+b+c == perimeter: t.append([a,b,c])
     return t
 
-def nthTriangle(nth):
-    return int(0.5*nth*(nth+1))
-
 def panDigital(n): #INT retorna quantida pandigital, 0: não é
     st = sorted(str(n))
     i=0
@@ -164,4 +161,13 @@ def genAllPanDigitals(a=0,b=9):
         s = int(''.join(x))
         t.append(s)
     return t
+
+def triangle(n):
+    return n*(n+1)//2
+
+def pentagonal(n):
+    return n*(3*n-1)//2
+
+def hexagonal(n):
+    return n*(2*n-1)
 
