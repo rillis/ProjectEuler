@@ -106,6 +106,9 @@ def div(arr): #ARR
 def removeDup(arr): #ARR
     return list(dict.fromkeys(arr))
 
+def allSame(arr):
+    return sum(arr)==arr[0]*len(arr)
+
 #--------------------------------- Collatz
 def collatz(n): #INT
     return n//2 if n%2==0 else 3*n+1
