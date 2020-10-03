@@ -12,6 +12,26 @@ def primos(nth): #INT [bool] (true=primo) 0 até nth
                 a[n] = False
     return a
 
+def isPrime(n): #AKS
+    if n == 1:
+        return False
+    if n == 2:
+        return True
+    if n == 3:
+        return True
+    if n % 2 == 0:
+        return False
+    if n % 3 == 0:
+        return False
+    i = 5
+    w = 2
+    while i*i <= n:
+        if n % i == 0:
+            return False
+        i += w
+        w = 6-w
+    return True
+
 #--------------------------------- Progressão aritmética
 def numeroTermos(an, a1, r): #INT
     return ((an-a1)//r)+1
