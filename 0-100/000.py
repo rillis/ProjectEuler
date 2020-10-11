@@ -22,6 +22,8 @@ def solution(n):
 
 if __name__ == "__main__":
     n=0
+    #f = open("text/XXX.txt", "r")
+    #n = f.read().strip().split()
     start_t = timeit.default_timer()  # DEBUG
     print(solution(n))
     stop_t = timeit.default_timer()  # DEBUG
