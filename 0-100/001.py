@@ -1,13 +1,13 @@
 
-# Points 100/100
-# Notes: -
+# Time to achieve the answer: 0.00019s
+# Notes: Running in PyPy3
 
-# 
-# ProjectEuler - HackerRank
+#
+# ProjectEuler
 # Copyright (c) ProjectEuler - rillis. All rights reserved.
-# 
+#
 # https://github.com/rillis/ProjectEuler
-# 
+#
 
 import math
 import os
@@ -15,29 +15,17 @@ import random
 import re
 import sys
 import itertools
+import timeit
 
-def n_termos(an, ai, r):
-    return ((an-ai)//r)+1
-
-def an(t, r):
-    return t-(t%r)
-
-def spa(a1, an, n):
-    return ((a1+an)*n)//2
-
-def soma_pa(n, i):
-    if n >= i: return spa(i, an(n, i), n_termos(an(n, i), i, i))
-    elif n == i: return i
-    else: return 0
-
-def mult(n):
-    spa3 = soma_pa(n, 3)
-    spa5 = soma_pa(n, 5)
-    spa15 = soma_pa(n, 15) if n+1>=15 else 0
-    return spa3+spa5-spa15
+def solution(n):
+    a = [x for x in range(3, n) if x%3==0 or x%5==0]
+    return um(a)
 
 if __name__ == "__main__":
-    t = int(input().strip())
-    for _ in range(t):
-        n = int(input().strip())
-        print(mult(n-1))
+    n=1000
+    #f = open("text/XXX.txt", "r")
+    #n = f.read().strip().split()
+    start_t = timeit.default_timer()  # DEBUG
+    print(solution(n))
+    stop_t = timeit.default_timer()  # DEBUG
+    print("TOTAL RUNTIME:", stop_t - start_t)  # DEBUG

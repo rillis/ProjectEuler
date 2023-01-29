@@ -26,5 +26,9 @@ if __name__ == "__main__":
     #n = f.read().strip().split()
     start_t = timeit.default_timer()  # DEBUG
     print(solution(n))
-    stop_t = timeit.default_timer()  # DEBUG
-    print("TOTAL RUNTIME:", stop_t - start_t)  # DEBUG
+    stop_t = timeit.default_timer()  # DEBUG]
+    final_time = stop_t - start_t
+    if(final_time < 0.0001):
+        print("TOTAL RUNTIME: <0.0001 s:", final_time)
+    else:
+        print("TOTAL RUNTIME:", round(final_time, 4), "s")

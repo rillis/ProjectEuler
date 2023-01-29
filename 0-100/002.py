@@ -1,13 +1,13 @@
 
-# Points 100/100
-# Notes: -
+# Time to achieve the answer: 0.0002s
+# Notes: Running in PyPy3
 
-# 
-# ProjectEuler - HackerRank
+#
+# ProjectEuler
 # Copyright (c) ProjectEuler - rillis. All rights reserved.
-# 
+#
 # https://github.com/rillis/ProjectEuler
-# 
+#
 
 import math
 import os
@@ -15,23 +15,27 @@ import random
 import re
 import sys
 import itertools
+import timeit
 
-def gen_fibo(n):
-    k = 8
-    fibo = [1,2,3,5]
-    while(k<n):
-        fibo.append(k)
-        k+=fibo[-2]
-    return fibo
+def solution(n):
+    fibo = [1, 2]
+    while True:
+        t = fibo[-1] + fibo[-2]
+        if t >= n: break
+        fibo.append(t)
+    s = sum([x for x in fibo if x%2==0])
 
-def even_fibonacci(n):
-    fibo = gen_fibo(n)
-    soma = sum([i if i%2==0 else 0 for i in fibo])
-    return soma
-
+    return s
 
 if __name__ == "__main__":
-    t = int(input().strip())
-    for _ in range(t):
-        n = int(input().strip())
-        print(even_fibonacci(n))
+    n=4000000
+    #f = open("text/XXX.txt", "r")
+    #n = f.read().strip().split()
+    start_t = timeit.default_timer()  # DEBUG
+    print(solution(n))
+    stop_t = timeit.default_timer()  # DEBUG]
+    final_time = stop_t - start_t
+    if(final_time < 0.0001):
+        print("TOTAL RUNTIME: <0.0001 s:", final_time)
+    else:
+        print("TOTAL RUNTIME:", round(final_time, 4), "s")
